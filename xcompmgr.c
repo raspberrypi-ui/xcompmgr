@@ -197,6 +197,7 @@ static Bool		excludeDockShadows = False;
 static Bool		fadeTrans = False;
 
 static Bool		autoRedirect = False;
+static Bool		noRegister = False;
 
 /* For shadow precomputation */
 static int		Gsize = -1;
@@ -1998,6 +1999,8 @@ usage (const char *program)
     "      Draw server-side shadows with sharp edges.\n"
     "   -S\n"
     "      Enable synchronous operation (for debugging).\n"
+    "   -R\n"
+    "      Run, but do not explicitly register compositing manager with X.\n"
         );
     exit (1);
 }
@@ -2072,7 +2075,7 @@ main (int argc, char **argv)
     char	    *display = NULL;
     int		    o;
 
-    while ((o = getopt (argc, argv, "D:I:O:d:r:o:l:t:scnfFCaS")) != -1)
+    while ((o = getopt (argc, argv, "D:I:O:d:r:o:l:t:scnfFCaSR")) != -1)
     {
 	switch (o) {
 	case 'd':
@@ -2129,6 +2132,9 @@ main (int argc, char **argv)
 	case 't':
 	    shadowOffsetY = atoi (optarg);
 	    break;
+	case 'R':
+	    noRegister = True;
+	    break;
 	default:
 	    usage (argv[0]);
 	    break;
@@ -2180,7 +2186,7 @@ main (int argc, char **argv)
 	exit (1);
     }
 
-    if (!register_cm(dpy))
+    if (!noRegister && !register_cm(dpy))
     {
 	exit (1);
     }
