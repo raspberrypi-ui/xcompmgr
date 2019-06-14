@@ -1,0 +1,66 @@
+xcompmgr (1.1.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add xutils-dev to Build-Depends
+  * Bump Standards-Version to 3.9.6 (no changes needed)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 26 Apr 2015 12:25:51 +0200
+
+xcompmgr (1.1.6-1) unstable; urgency=low
+
+  * New upstream release (Closes: #666464)
+    - Report correct version (Closes: #571957)
+    - Fix windows updates when using the SHAPE extension (Closes: #593364)
+  * New maintainer (Closes: #729378)
+  * Bump debhelper compat level to 9
+  * Switch to short-form rules
+  * Remove spurious debian-changes-1.1.5-1 patch
+  * Remove not needed *.install file
+  * Drop versioned Build-Depends (versions already in oldstable)
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+  * Add 01_fix-shadows.patch to fix shadow drawing
+  * Update copyright file to Copyright-Format 1.0
+  * Add Vcs-* headers
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Fri, 15 Nov 2013 14:45:29 +0100
+
+xcompmgr (1.1.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to dpkg-source 3.0 (quilt) format.
+  * debian/control: 
+    - Standards-Version updated to 3.8.4.
+
+ -- Gustavo Franco <stratus@debian.org>  Sat, 27 Feb 2010 22:56:31 -0300
+
+xcompmgr (1.1.4-0.1) unstable; urgency=low
+
+  * Non-maintainer upload with maintainer agreement.
+  * New upstream release.
+  * Use debhelper v7, drop cdbs build-dep, update to newer automake.
+  * Add watch file.
+
+ -- Julien Cristau <jcristau@debian.org>  Thu, 29 May 2008 15:43:09 +0200
+
+xcompmgr (1.1.1+cvs.20051218-1) experimental; urgency=low
+
+  * First Debian release (Closes: #343947).
+  * debian/control
+    - Maintainer field changed
+    - Standards-Version updated to 3.6.2.1
+    - Build-Depends versioned
+    - Build-Depends on automake1.7 added
+
+ -- Gustavo Franco <stratus@debian.org>  Sun, 18 Dec 2005 21:44:26 -0200
+
+xcompmgr (1.1.1+cvs.20041109-0ubuntu2) UNRELEASED; urgency=low
+
+  * Add pkg-config to Build-Depends.
+
+ -- Daniel Stone <daniel.stone@canonical.com>  Wed, 24 Nov 2004 14:50:09 +0100
+
+xcompmgr (1.1.1+cvs.20041109-0ubuntu1) UNRELEASED; urgency=low
+
+  * First xcompmgr release.
+
+ -- Daniel Stone <daniel.stone@canonical.com>  Tue,  9 Nov 2004 21:01:19 +0100
